@@ -87,7 +87,7 @@ You can report any security bugs found in the source code of this plugin through
 
 == Changelog ==
 
-= 2.2 - 2024-01-17 =
+= 2.2 - 2024-01-19 =
 * Remove code related to fetch the information from the CTT website, including simplehtmldom, as is not likely we'll be able to activate that functionality again
 * Security update
 * Requires WooCommerce 6.0 and WordPress 5.6
