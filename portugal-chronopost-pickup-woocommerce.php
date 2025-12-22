@@ -3,7 +3,7 @@
  * Plugin Name:          Portugal DPD Pickup and Lockers network for WooCommerce
  * Plugin URI:           https://www.webdados.pt/wordpress/plugins/rede-chronopost-pickup-portugal-woocommerce-wordpress/
  * Description:          Lets you deliver on the DPD Portugal Pickup network of partners or Lockers.
- * Version:              3.6
+ * Version:              3.7
  * Author:               Naked Cat Plugins (by Webdados)
  * Author URI:           https://nakedcatplugins.com
  * Text Domain:          portugal-chronopost-pickup-woocommerce
@@ -11,7 +11,7 @@
  * Tested up to:         6.9
  * Requires PHP:         7.2
  * WC requires at least: 7.1
- * WC tested up to:      10.3
+ * WC tested up to:      10.4
  * Requires Plugins:     woocommerce
  */
 
@@ -952,15 +952,14 @@ function cppw_update_pickup_list_function() {
 					update_option( 'cppw_points_last_update_server', $url, false );
 					$done = true;
 					return true;
-					break;
 				} elseif ( apply_filters( 'cppw_update_pickup_list_error_log', false ) ) {
-						error_log( '[DPD Portugal Pickup WooCommerce] It was not possible to get the points update: no points array in response (' . $url . ')' );
+					error_log( '[DPD Portugal Pickup WooCommerce] It was not possible to get the points update: no points array in response (' . $url . ')' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 				}
 			} elseif ( apply_filters( 'cppw_update_pickup_list_error_log', false ) ) {
-					error_log( '[DPD Portugal Pickup WooCommerce] It was not possible to get the points update: no body in response (' . $url . ')' );
+					error_log( '[DPD Portugal Pickup WooCommerce] It was not possible to get the points update: no body in response (' . $url . ')' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 			}
 		} elseif ( apply_filters( 'cppw_update_pickup_list_error_log', false ) ) {
-				error_log( '[DPD Portugal Pickup WooCommerce] It was not possible to get the points update via webservice: (' . $url . ') ' . ( is_wp_error( $response ) ? print_r( $response, true ) : 'unknown error' ) );
+				error_log( '[DPD Portugal Pickup WooCommerce] It was not possible to get the points update via webservice: (' . $url . ') ' . ( is_wp_error( $response ) ? print_r( $response, true ) : 'unknown error' ) ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log, WordPress.PHP.DevelopmentFunctions.error_log_print_r
 		}
 	}
 	if ( ! $done ) {
@@ -1013,7 +1012,7 @@ function cppw_update_pickup_list_function() {
 			}
 		}
 		if ( $ftp_error && apply_filters( 'cppw_update_pickup_list_error_log', false ) ) {
-			error_log( '[DPD Portugal Pickup WooCommerce] It was not possible to get the points update via ftp' );
+			error_log( '[DPD Portugal Pickup WooCommerce] It was not possible to get the points update via ftp' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 		}
 		return false;
 	}

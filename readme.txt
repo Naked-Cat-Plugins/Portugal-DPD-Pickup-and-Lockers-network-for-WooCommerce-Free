@@ -6,7 +6,7 @@ Author URI: https://nakedcatplugins.com
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 3.6
+Stable tag: 3.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -116,6 +116,10 @@ If you buy our [Pro DPD for label issuing plugin](https://nakedcatplugins.com/pr
 You can report any security bugs found in the source code of this plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/portugal-chronopost-pickup-woocommerce). The Patchstack team will assist you with verification, CVE assignment and take care of notifying the developers of this plugin.
 
 == Changelog ==
+
+= 3.7 - 2025-12-22 =
+* [FIX] [Table Rate Shipping](https://automattic.pxf.io/0920kJ) (by WooCommerce) integration
+* [DEV] Tested with WordPress 7.0-alpha-61392 and WooCommerce 10.4.3
 
 = 3.6 - 2025-12-09 =
 * [DEV] Improve WordPress Coding Standards
