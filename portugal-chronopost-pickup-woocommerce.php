@@ -3,7 +3,7 @@
  * Plugin Name:          Portugal DPD Pickup and Lockers network for WooCommerce
  * Plugin URI:           https://www.webdados.pt/wordpress/plugins/rede-chronopost-pickup-portugal-woocommerce-wordpress/
  * Description:          Lets you deliver on the DPD Portugal Pickup network of partners or Lockers.
- * Version:              3.7
+ * Version:              3.8
  * Author:               Naked Cat Plugins (by Webdados)
  * Author URI:           https://nakedcatplugins.com
  * Text Domain:          portugal-chronopost-pickup-woocommerce
