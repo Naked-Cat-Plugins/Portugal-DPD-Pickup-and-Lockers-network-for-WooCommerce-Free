@@ -8,10 +8,10 @@
  * Author URI:           https://nakedcatplugins.com
  * Text Domain:          portugal-chronopost-pickup-woocommerce
  * Requires at least:    5.8
- * Tested up to:         6.9
+ * Tested up to:         7.0
  * Requires PHP:         7.2
  * WC requires at least: 7.1
- * WC tested up to:      10.4
+ * WC tested up to:      10.7
  * Requires Plugins:     woocommerce
  */
 

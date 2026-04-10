@@ -4,7 +4,7 @@ Tags: dpd, chronopost, seur, pickup, lockers
 Author: Naked Cat Plugins (by Webdados)
 Author URI: https://nakedcatplugins.com
 Requires at least: 5.8
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.2
 Stable tag: 3.7
 License: GPLv3
@@ -116,6 +116,10 @@ If you buy our [Pro DPD for label issuing plugin](https://nakedcatplugins.com/pr
 You can report any security bugs found in the source code of this plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/portugal-chronopost-pickup-woocommerce). The Patchstack team will assist you with verification, CVE assignment and take care of notifying the developers of this plugin.
 
 == Changelog ==
+
+= TBA =
+* [NEW] Plugin ownership transferred from [Marco Almeida | Webdados](https://profiles.wordpress.org/webdados/) to [Naked Cat Plugins](https://profiles.wordpress.org/nakedcatplugins/) on WordPress.org - No worries, we’re the same people :-)
+* [DEV] Tested up to WordPress 7.0-RC2-62197 and WooCommerce 10.7.0-beta.2
 
 = 3.7 - 2025-12-22 =
 * [FIX] [Table Rate Shipping](https://automattic.pxf.io/0920kJ) (by WooCommerce) integration
