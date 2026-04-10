@@ -94,7 +94,6 @@ add_action(
 	}
 );
 
-
 /* Portuguese Postcodes nag */
 add_action(
 	'admin_init',
@@ -113,5 +112,10 @@ add_action(
 		}
 	}
 );
+
+/* Recomment ifthenpay */
+if ( ! defined( 'WEBDADOS_RECOMMEND_IFTHENPAY' ) ) {
+	require_once 'recommend-ifthenpay/class-recommend-ifthenpay.php';
+}
 
 /* If you're reading this you must know what you're doing ;-) Greetings from sunny Portugal! */
