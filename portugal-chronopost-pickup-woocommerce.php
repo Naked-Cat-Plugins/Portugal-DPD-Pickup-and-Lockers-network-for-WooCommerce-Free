@@ -17,8 +17,6 @@
 
 /* WooCommerce CRUD ready */
 
-/* Loads textdomain - No longer needed */
-
 /**
  * Initialize the plugin functionality.
  *
@@ -969,15 +967,14 @@ function cppw_update_pickup_list_function() {
 		if ( ! empty( $conn_id ) ) {
 			if ( ftp_login( $conn_id, 'pickme', 'pickme' ) ) {
 				ftp_pasv( $conn_id, true );
-				$h = fopen( 'php://temp', 'r+' );
+				$h = fopen( 'php://temp', 'r+' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
 				if ( ftp_fget( $conn_id, $h, 'lojaspickme.txt', FTP_ASCII, 0 ) ) {
 					$fstats = fstat( $h );
 					fseek( $h, 0 );
-					$contents = fread( $h, $fstats['size'] );
-					fclose( $h );
+					$contents = fread( $h, $fstats['size'] ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fread
+					fclose( $h ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose
 					ftp_close( $conn_id );
 					if ( trim( $contents ) !== '' ) {
-						$contents    = utf8_encode( $contents );
 						$temp_points = explode( PHP_EOL, $contents );
 						if ( count( $temp_points ) > 1 ) {
 							$ftp_error = false;
@@ -1542,46 +1539,51 @@ function cppw_manage_shop_order_custom_column( $column_name, $postid_or_order ) 
 	}
 }
 
-
-
-	/* DPD Portugal for WooCommerce nag */
-	add_action(
-		'admin_init',
-		function () {
-			if (
+/* DPD Portugal for WooCommerce nag */
+add_action(
+	'admin_init',
+	function () {
+		if (
 			( ! defined( 'WEBDADOS_DPD_PRO_NAG' ) )
 			&&
 			( ! class_exists( 'Woo_DPD_Portugal' ) )
 			&&
 			empty( get_transient( 'webdados_dpd_portugal_pro_nag' ) )
-			) {
-				define( 'WEBDADOS_DPD_PRO_NAG', true );
-				require_once 'pro_nag/pro_nag.php';
-			}
-			if (
-			( ! defined( 'WEBDADOS_DPD_PICKUP_PRO_NAG' ) )
 			&&
-			( ! class_exists( 'Woo_DPD_Pickup' ) )
-			&&
-			empty( get_transient( 'webdados_dpd_pickup_pro_nag' ) )
-			) {
-				define( 'WEBDADOS_DPD_PICKUP_PRO_NAG', true );
-				require_once 'pro_nag/pro_pickup_nag.php';
-			}
+			( intval( get_user_meta( get_current_user_id(), 'webdados_dpd_portugal_pro_nag_dismissed_until', true ) ) < time() )
+		) {
+			define( 'WEBDADOS_DPD_PRO_NAG', true );
+			require_once 'pro-nag/pro-nag.php';
 		}
-	);
-
-	/* HPOS Compatible */
-	add_action(
-		'before_woocommerce_init',
-		function () {
-			if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
-				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
-				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'cart_checkout_blocks', __FILE__, true );
-			}
+		if (
+		( ! defined( 'WEBDADOS_DPD_PICKUP_PRO_NAG' ) )
+		&&
+		( ! class_exists( 'Woo_DPD_Pickup' ) )
+		&&
+		empty( get_transient( 'webdados_dpd_pickup_pro_nag' ) )
+		&&
+		( intval( get_user_meta( get_current_user_id(), 'webdados_dpd_pickup_pro_nag_dismissed_until', true ) ) < time() )
+		) {
+			define( 'WEBDADOS_DPD_PICKUP_PRO_NAG', true );
+			require_once 'pro-nag/pro-pickup-nag.php';
 		}
-	);
+	}
+);
 
+/* HPOS Compatible */
+add_action(
+	'before_woocommerce_init',
+	function () {
+		if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'cart_checkout_blocks', __FILE__, true );
+		}
+	}
+);
 
-	/* If you’re reading this you must know what you’re doing ;- ) Greetings from sunny Portugal! */
+/* Recomment ifthenpay */
+if ( ! defined( 'WEBDADOS_RECOMMEND_IFTHENPAY' ) ) {
+	require_once 'recommend-ifthenpay/class-recommend-ifthenpay.php';
+}
 
+/* If you’re reading this you must know what you’re doing ;- ) Greetings from sunny Portugal! */

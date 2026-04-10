@@ -1,4 +1,7 @@
 <?php
+/**
+ * DPD Portugal for WooCommerce - Pro nag
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -6,15 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Display the DPD Portugal for WooCommerce pro plugin nag notice.
- *
- * @return void
  */
 function webdados_dpd_portugal_pro_nag() {
 	?>
 		<script type="text/javascript">
 		jQuery(function($) {
 			$( document ).on( 'click', '#webdados_dpd_portugal_pro_nag .notice-dismiss', function () {
-				//AJAX SET TRANSIENT FOR 90 DAYS
+				// AJAX SET USER META FOR 120 DAYS
 				$.ajax( ajaxurl, {
 					type: 'POST',
 					data: {
@@ -58,13 +59,11 @@ add_action( 'admin_notices', 'webdados_dpd_portugal_pro_nag' );
 
 /**
  * Dismiss nag
- *
- * @return void
  */
 function dismiss_webdados_dpd_portugal_pro_nag() {
-	$days       = 60;
-	$expiration = $days * DAY_IN_SECONDS;
-	set_transient( 'webdados_dpd_portugal_pro_nag', 1, $expiration );
+	$days                 = 120;
+	$expiration_timestamp = time() + ( $days * DAY_IN_SECONDS );
+	update_user_meta( get_current_user_id(), 'webdados_dpd_portugal_pro_nag_dismissed_until', $expiration_timestamp );
 	wp_die();
 }
 add_action( 'wp_ajax_dismiss_webdados_dpd_portugal_pro_nag', 'dismiss_webdados_dpd_portugal_pro_nag' );

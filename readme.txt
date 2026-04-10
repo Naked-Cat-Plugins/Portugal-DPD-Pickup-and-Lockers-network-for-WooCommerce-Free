@@ -119,6 +119,8 @@ You can report any security bugs found in the source code of this plugin through
 
 = TBA =
 * [NEW] Plugin ownership transferred from [Marco Almeida | Webdados](https://profiles.wordpress.org/webdados/) to [Naked Cat Plugins](https://profiles.wordpress.org/nakedcatplugins/) on WordPress.org - No worries, we’re the same people :-)
+* [TWEAK] Show the “DPD Portugal for WooCommerce” and “DPD / SEUR / Geopost Pickup and Lockers network for WooCommerce” notices less often and store dismissal in user meta instead of transients
+* [TWEAK] Added [our ifthenpay plugin](https://wordpress.org/plugins/multibanco-ifthen-software-gateway-for-woocommerce/) as a suggested payment gateway in WooCommerce, if still not present (can be removed by setting the `NAKEDCAT_RECOMMEND_IFTHENPAY` constant to true)
 * [DEV] Tested up to WordPress 7.0-RC2-62197 and WooCommerce 10.7.0-beta.2
 
 = 3.7 - 2025-12-22 =
