@@ -1,22 +1,11 @@
 <?php
 /**
- * Recommend_Ifthenpay
+ * Class Recommend_Ifthenpay
  *
- * @version 1.0
+ * @version 1.2
  */
 
 namespace NakedCatPlugins\Recommend_Ifthenpay;
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
-
-// Bail if another bundled copy of this snippet has already booted in this request.
-if ( defined( 'NAKEDCAT_RECOMMEND_IFTHENPAY' ) ) {
-	return;
-}
-
-define( 'NAKEDCAT_RECOMMEND_IFTHENPAY', true );
 
 /**
  * Recommend Ifthenpay.
@@ -407,10 +396,3 @@ class Recommend_Ifthenpay {
 		return rest_ensure_response( array( 'success' => true ) );
 	}
 }
-
-add_action(
-	'plugins_loaded',
-	function () {
-		( new Recommend_Ifthenpay() )->init();
-	}
-);
