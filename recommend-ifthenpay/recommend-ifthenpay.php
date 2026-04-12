@@ -2,7 +2,7 @@
 /**
  * Recommend_Ifthenpay
  *
- * @version 1.2
+ * @version 1.3
  */
 
 namespace NakedCatPlugins\Recommend_Ifthenpay;
@@ -22,12 +22,11 @@ if (
 
 define( 'NAKEDCAT_RECOMMEND_IFTHENPAY', true );
 
-require_once __DIR__ . '/class-recommend-ifthenpay.php';
-
 add_action(
 	'plugins_loaded',
 	function () {
 		if ( ! class_exists( 'NakedCatPlugins\Recommend_Ifthenpay\Recommend_Ifthenpay' ) ) {
+			require_once __DIR__ . '/class-recommend-ifthenpay.php';
 			( new \NakedCatPlugins\Recommend_Ifthenpay\Recommend_Ifthenpay() )->init();
 		}
 	}

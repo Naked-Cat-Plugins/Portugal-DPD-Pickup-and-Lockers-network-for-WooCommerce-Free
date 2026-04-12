@@ -2,7 +2,7 @@
 /**
  * Class Recommend_Ifthenpay
  *
- * @version 1.2
+ * @version 1.3
  */
 
 namespace NakedCatPlugins\Recommend_Ifthenpay;
