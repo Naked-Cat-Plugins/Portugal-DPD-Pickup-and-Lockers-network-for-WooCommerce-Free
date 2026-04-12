@@ -6,7 +6,7 @@ Author URI: https://nakedcatplugins.com
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 3.8
+Stable tag: 3.9
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -116,6 +116,9 @@ If you buy our [Pro DPD for label issuing plugin](https://nakedcatplugins.com/pr
 You can report any security bugs found in the source code of this plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/portugal-chronopost-pickup-woocommerce). The Patchstack team will assist you with verification, CVE assignment and take care of notifying the developers of this plugin.
 
 == Changelog ==
+
+= 3.9 - 2024-04-12 =
+* [FIX] PHP fatal error, introduced in 3.8, in specific scenarios
 
 = 3.8 - 2026-04-10 =
 * [NEW] Plugin ownership transferred from [Marco Almeida | Webdados](https://profiles.wordpress.org/webdados/) to [Naked Cat Plugins](https://profiles.wordpress.org/nakedcatplugins/) on WordPress.org - No worries, we’re the same people :-)
