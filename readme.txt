@@ -6,7 +6,7 @@ Author URI: https://nakedcatplugins.com
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 3.9
+Stable tag: 4.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -117,8 +117,9 @@ You can report any security bugs found in the source code of this plugin through
 
 == Changelog ==
 
-= 3.9 - 2024-04-12 =
+= 4.0 - 2024-04-12 =
 * [FIX] PHP fatal error, introduced in 3.8, in specific scenarios
+* [FIX] Version number
 
 = 3.8 - 2026-04-10 =
 * [NEW] Plugin ownership transferred from [Marco Almeida | Webdados](https://profiles.wordpress.org/webdados/) to [Naked Cat Plugins](https://profiles.wordpress.org/nakedcatplugins/) on WordPress.org - No worries, we’re the same people :-)
