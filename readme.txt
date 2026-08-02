@@ -6,7 +6,7 @@ Author URI: https://nakedcatplugins.com
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 4.0
+Stable tag: 4.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -117,10 +117,11 @@ You can report any security bugs found in the source code of this plugin through
 
 == Changelog ==
 
-= TBA =
+= 4.1 - 2026-08-02 =
+* [FIX] No longer declares WooCommerce block-based checkout compatibility, since delivery-point selection only ever worked on the classic checkout (only the premium woo-dpd-pickup supports the block checkout)
 * [DEV] Bundled ifthenpay suggestion module updated: documented the intentional Portugal-only display exception, guarded an array_unshift() call against a possible future WooCommerce REST response change
 
-= 4.0 - 2024-04-12 =
+= 4.0 - 2026-04-12 =
 * [FIX] PHP fatal error, introduced in 3.8, in specific scenarios
 * [FIX] Version number
 
