@@ -118,7 +118,7 @@ You can report any security bugs found in the source code of this plugin through
 == Changelog ==
 
 = TBA =
-* [DEV] The bundled ifthenpay suggestion module's opt-out check now uses the constant the module itself defines (`NAKEDCAT_RECOMMEND_IFTHENPAY`), it previously checked one that was never defined
+* [DEV] Bundled ifthenpay suggestion module updated
 
 = 4.1 - 2026-08-02 =
 * [FIX] No longer declares WooCommerce block-based checkout compatibility, since delivery-point selection only ever worked on the classic checkout (only our premium “[DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/)” plugin supports the block checkout)
