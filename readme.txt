@@ -122,7 +122,7 @@ You can report any security bugs found in the source code of this plugin through
 
 = 4.1 - 2026-08-02 =
 * [FIX] No longer declares WooCommerce block-based checkout compatibility, since delivery-point selection only ever worked on the classic checkout (only our premium “[DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/)” plugin supports the block checkout)
-* [DEV] Bundled ifthenpay suggestion module updated: documented the intentional Portugal-only display exception, guarded an array_unshift() call against a possible future WooCommerce REST response change
+* [DEV] Bundled ifthenpay suggestion module updated
 
 = 4.0 - 2026-04-12 =
 * [FIX] PHP fatal error, introduced in 3.8, in specific scenarios
