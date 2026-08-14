@@ -3,15 +3,15 @@
  * Plugin Name:          Portugal DPD Pickup and Lockers network for WooCommerce
  * Plugin URI:           https://www.webdados.pt/wordpress/plugins/rede-chronopost-pickup-portugal-woocommerce-wordpress/
  * Description:          Lets you deliver on the DPD Portugal Pickup network of partners or Lockers.
- * Version:              4.1
+ * Version:              4.2
  * Author:               Naked Cat Plugins (by Webdados)
  * Author URI:           https://nakedcatplugins.com
  * Text Domain:          portugal-chronopost-pickup-woocommerce
  * Requires at least:    5.8
- * Tested up to:         7.0
+ * Tested up to:         7.1
  * Requires PHP:         7.2
  * WC requires at least: 7.1
- * WC tested up to:      10.7
+ * WC tested up to:      11.0
  * Requires Plugins:     woocommerce
  */
 
@@ -508,71 +508,92 @@ function cppw_points_fragment() {
 			$country = $customer['shipping_country'];
 		}
 	}
+	// Was a point already chosen before this fragment refresh (e.g. update_order_review after a
+	// postcode/coupon/payment change)? WooCommerce sends the whole checkout form serialized as
+	// post_data on that call, which is where the field actually lives, it's not a top-level field
+	// like s_postcode/s_country above.
+	$selected_point = '';
+	if ( apply_filters( 'cppw_enable_persistent_point', true ) && isset( $_POST['post_data'] ) ) {
+		parse_str( sanitize_text_field( wp_unslash( $_POST['post_data'] ) ), $checkout_post_data );
+		if ( isset( $checkout_post_data['cppw_point'] ) ) {
+			$selected_point = trim( sanitize_text_field( $checkout_post_data['cppw_point'] ) );
+		}
+	} elseif ( isset( $_POST['cppw_point'] ) ) {
+		$selected_point = trim( sanitize_text_field( wp_unslash( $_POST['cppw_point'] ) ) );
+	}
 	ob_start();
 	?>
 	<span class="cppw-points-fragment">
-	<?php
-	if ( $country === 'PT' ) {
-		$points = cppw_get_pickup_points( $postcode );
-		if ( is_array( $points ) && count( $points ) > 0 ) {
-			// Developers can choose not to show all $points
-			$points = apply_filters( 'cppw_available_points', $points, $postcode );
-			// Remove lockers from list?
-			if ( apply_filters( 'cppw_hide_lockers', false ) ) {
-				foreach ( $points as $key => $ponto ) {
-					if ( cppw_point_is_locker( $ponto ) ) {
-						unset( $points[ $key ] );
+		<?php
+		if ( $country === 'PT' ) {
+			$points = cppw_get_pickup_points( $postcode );
+			if ( is_array( $points ) && count( $points ) > 0 ) {
+				// Developers can choose not to show all $points
+				$points = apply_filters( 'cppw_available_points', $points, $postcode );
+				// Remove lockers from list?
+				if ( apply_filters( 'cppw_hide_lockers', false ) ) {
+					foreach ( $points as $key => $ponto ) {
+						if ( cppw_point_is_locker( $ponto ) ) {
+							unset( $points[ $key ] );
+						}
 					}
 				}
-			}
-			// Let's do it then
-			if ( count( $points ) > 0 ) {
-				?>
-					<select name="cppw_point" id="cppw_point">
-						<?php if ( get_option( 'cppw_checkout_default_empty' ) === 'yes' ) { ?>
-							<option value="">- <?php esc_html_e( 'Select point', 'portugal-chronopost-pickup-woocommerce' ); ?> -</option>
-						<?php } ?>
-						<optgroup label="<?php esc_html_e( 'Near you', 'portugal-chronopost-pickup-woocommerce' ); ?>">
-							<?php
-							$i = 0;
-							foreach ( $points as $ponto ) {
-								++$i;
-								if ( $i === 1 ) {
-									$first = $ponto;
-								}
-								if ( $i === $nearby + 1 ) {
-									?>
-								</optgroup>
-								<optgroup label="<?php esc_html_e( 'Other spots', 'portugal-chronopost-pickup-woocommerce' ); ?>">
-								<?php } ?>
-								<option value="<?php echo esc_attr( $ponto['number'] ); ?>">
-									<?php echo esc_html( $ponto['localidade'] ); ?>
-									-
-									<?php echo esc_html( $ponto['nome'] ); ?>
-								</option>
+				// Let's do it then
+				if ( count( $points ) > 0 ) {
+					?>
+						<select name="cppw_point" id="cppw_point">
+							<?php if ( get_option( 'cppw_checkout_default_empty' ) === 'yes' ) { ?>
+								<option value="">- <?php esc_html_e( 'Select point', 'portugal-chronopost-pickup-woocommerce' ); ?> -</option>
+							<?php } ?>
+							<optgroup label="<?php esc_html_e( 'Near you', 'portugal-chronopost-pickup-woocommerce' ); ?>">
 								<?php
-								if ( $i === $total ) {
-									break;
+								$i                   = 0;
+								$selected_point_data = null;
+								foreach ( $points as $ponto ) {
+									++$i;
+									if ( $i === 1 ) {
+										$first = $ponto;
+									}
+									if ( $selected_point !== '' && (string) $ponto['number'] === (string) $selected_point ) {
+										$selected_point_data = $ponto;
+									}
+									if ( $i === $nearby + 1 ) {
+										?>
+									</optgroup>
+									<optgroup label="<?php esc_html_e( 'Other spots', 'portugal-chronopost-pickup-woocommerce' ); ?>">
+									<?php } ?>
+									<option value="<?php echo esc_attr( $ponto['number'] ); ?>" <?php selected( $ponto['number'], $selected_point ); ?>>
+										<?php echo esc_html( $ponto['localidade'] ); ?>
+										-
+										<?php echo esc_html( $ponto['nome'] ); ?>
+									</option>
+									<?php
+									if ( $i === $total ) {
+										break;
+									}
 								}
-							}
-							?>
-						</optgroup>
-					</select>
-					<input type="hidden" name="cppw_point_active" id="cppw_point_active" value="0"/>
+								?>
+							</optgroup>
+						</select>
+						<input type="hidden" name="cppw_point_active" id="cppw_point_active" value="0"/>
+						<?php
+						if ( $selected_point_data !== null ) {
+							cppw_point_details( $selected_point_data );
+						} else {
+							cppw_point_details( get_option( 'cppw_checkout_default_empty' ) === 'yes' ? null : $first );
+						}
+				} else {
+					?>
+					<p><strong><?php esc_html_e( 'ERROR: No DPD points were found.', 'portugal-chronopost-pickup-woocommerce' ); ?></strong></p>
 					<?php
-					cppw_point_details( get_option( 'cppw_checkout_default_empty' ) === 'yes' ? null : $first );
+				}
 			} else {
 				?>
-				<p><strong><?php esc_html_e( 'ERROR: No DPD points were found.', 'portugal-chronopost-pickup-woocommerce' ); ?></strong></p>
+				<p><strong><?php esc_html_e( 'ERROR: There are no DPD points in the database. The update process has not yet ended successfully.', 'portugal-chronopost-pickup-woocommerce' ); ?></strong></p>
 				<?php
 			}
-		} else {
-			?>
-			<p><strong><?php esc_html_e( 'ERROR: There are no DPD points in the database. The update process has not yet ended successfully.', 'portugal-chronopost-pickup-woocommerce' ); ?></strong></p>
-			<?php
 		}
-	}
-	?>
+		?>
 	</span>
 	<?php
 	return ob_get_clean();

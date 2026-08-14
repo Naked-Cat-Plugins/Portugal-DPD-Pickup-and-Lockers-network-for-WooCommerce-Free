@@ -4,9 +4,9 @@ Tags: dpd, chronopost, seur, pickup, lockers
 Author: Naked Cat Plugins (by Webdados)
 Author URI: https://nakedcatplugins.com
 Requires at least: 5.8
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 4.1
+Stable tag: 4.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -117,8 +117,10 @@ You can report any security bugs found in the source code of this plugin through
 
 == Changelog ==
 
-= TBA =
+= 4.2 - 2026-08-14 =
+* [TWEAK] Keep selected point when the checkout reloads (can be disabled by returning `false` to `cppw_enable_persistent_point`)
 * [DEV] Bundled ifthenpay suggestion module updated
+* [DEV] Tested up to WordPress 7.1-beta4-62968 and WooCommerce 11.0.1
 
 = 4.1 - 2026-08-02 =
 * [FIX] No longer declares WooCommerce block-based checkout compatibility, since delivery-point selection only ever worked on the classic checkout (only our premium “[DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/)” plugin supports the block checkout)
