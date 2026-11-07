@@ -50,3 +50,4 @@ Thumbs.db
 
 # Local ZIP creation tool
 createzip.command
+.claude/settings.local.json
