@@ -108,7 +108,7 @@ You can also change the zoom by using the `cppw_map_zoom` filter and scale using
 
 = Can I hide the DPD Lockers from the checkout options? =
 
-Yes. Return false to the `cppw_hide_lockers` filter.
+Yes. Return true to the `cppw_hide_lockers` filter.
 
 = I'm getting the “There are no DPD points in the database” and I can't get it to work even if I force the update process in the backend. What can I do? =
 
