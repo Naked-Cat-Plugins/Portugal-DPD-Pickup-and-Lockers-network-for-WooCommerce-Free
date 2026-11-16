@@ -14,14 +14,14 @@ Lets you deliver on the DPD Portugal Pickup network of partners or Lockers.
 
 == Description ==
 
-Lets you deliver on the [DPD Portugal](https://dpd.pt/) (former Chronopost and SEUR) Pickup network of partners or Lockers. This is not a shipping method but rather an add-on for any WooCommerce shipping method you activate it on.
+Lets you deliver on the [DPD Portugal](https://dpd.pt/) (formerly Chronopost and SEUR) Pickup network of partners or Lockers. This is not a shipping method but rather an add-on for any WooCommerce shipping method you activate it on.
 
-This is not an official DPD Portugal plugin, but their support was obtained during its development. The DPD logo and brand is copyrighted, belongs to them and is used with their permission.
+This is not an official DPD Portugal plugin, but their support was obtained during its development. The DPD logo and brand are copyrighted, belong to them and are used with their permission.
 
 = Features: =
 
 * Lets the store client choose a DPD Portugal Pickup point or Locker for the shipping delivery;
-* The DPD Portugal Pickup points option can be associated to any zone/method by the store owner;
+* The DPD Portugal Pickup points option can be associated with any zone/method by the store owner;
 * This plugin does not create a new WooCommerce Shipping Method and is compatible with methods that can be associated with a zone (WooCommerce 2.6 and above);
 * All WooCommerce built-in shipping methods are compatible;
 
@@ -29,7 +29,7 @@ This is not an official DPD Portugal plugin, but their support was obtained duri
 
 **Looking for a DPD, Chronopost, BRT, SEUR, PostNord, or Speedy Pickup and Lockers solution for other countries or the block-based checkout?**
 
-Our “[DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/)” premium plugin allows delivery in the Geopost network of Parcelshops and Lockers in Austria, Belgium, Bulgaria (Speedy), Croatia, Czech Republic, Denmark (PostNord), Estonia, Finland (PostNord), France (Chronopost), Germany, Hungary, Ireland, Italy (BRT), Latvia, Lithuania, Luxembourg, Netherlands, Norway (PostNord), Poland, Portugal, Romania, Slovakia, Slovenia, Spain (SEUR), Sweden (PostNord) Switzerland, and United Kingdom.
+Our “[DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/)” premium plugin allows delivery in the Geopost network of Parcelshops and Lockers in Austria, Belgium, Bulgaria (Speedy), Croatia, Czech Republic, Denmark (PostNord), Estonia, Finland (PostNord), France (Chronopost), Germany, Hungary, Ireland, Italy (BRT), Latvia, Lithuania, Luxembourg, Netherlands, Norway (PostNord), Poland, Portugal, Romania, Slovakia, Slovenia, Spain (SEUR), Sweden (PostNord), Switzerland, and United Kingdom.
 
 Suitable for WooCommerce shops using DPD to ship from any European country that can deliver to Pickup Points in the countries listed above.
 
@@ -37,19 +37,19 @@ It’s also compatible with the WooCommerce Block-Based Checkout.
 
 **Are you still issuing the shipping labels manually on the DPD website?**
 
-You should check out our new plugin “[DPD Portugal for WooCommerce](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/)”, issue the labels directly from WooCommerce, save hours and free up human resources for the really important tasks.
+You should check out our plugin “[DPD Portugal for WooCommerce](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/)”, issue the labels directly from WooCommerce, save hours and free up human resources for the really important tasks.
 
 With the Pro plugin you can also remove the Lockers from checkout options with simple settings on the backend, instead of having to use the `cppw_hide_lockers` developer filter.
 
 Buy it [here](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/) and use the coupon **webdados** for 10% discount!
 
-If you buy our [Pro DPD for label issuing plugin](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/), you’ll also get premium support for this plugin.
+If you buy our “[DPD Portugal for WooCommerce](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/)” plugin, you’ll also get premium support for this plugin.
 
 = 3rd Party Integration: =
 
 * [Table Rate Shipping](https://automattic.pxf.io/0920kJ) (by WooCommerce);
 * [Flexible Shipping for WooCommerce](https://wordpress.org/plugins/flexible-shipping/);
-* [Table Rate Shipping for WooCommerce](https://bolderelements.net/plugins/table-rate-shipping-woocommerce/) (by BolderElements);
+* [Table Rate Shipping for WooCommerce](https://bolderelements.net/plugins/table-rate-shipping-woocommerce/) (by Bolder Elements);
 * [WooCommerce Advanced Shipping](https://codecanyon.net/item/woocommerce-advanced-shipping/8634573);
 * Additional compatibility with other plugins can be implemented with costs to be budgeted under contact;
 
@@ -62,18 +62,18 @@ Already know our other WooCommerce (premium) plugins?
 * [Portuguese Postcodes for WooCommerce](https://nakedcatplugins.com/product/portuguese-postcodes-for-woocommerce-technical-support/) - Automatic filling of the address details at the checkout, including street name and neighborhood, based on the postal code
 * [Invoicing with InvoiceXpress for WooCommerce](https://invoicewoo.com/) - Automatically issue invoices directly from the WooCommerce order
 * [DPD Portugal for WooCommerce](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/) - Create shipping and return guide in the DPD webservice directly from the WooCommerce order
-* [Feed KuantoKusta for WooCommerce](https://nakedcatplugins.com/product/feed-kuantokusta-for-woocommerce-pro/) - Publish your products on Kuanto Kusta with this easy to use feed generator
-* [Multibanco, MBWAY, Credit card, Payshop and Cofidis Pay for WooCommerce – PRO add-on](https://nakedcatplugins.com/product/multibanco-mbway-credit-card-payshop-ifthenpay-woocommerce-pro-add-on/) - Extra features for the plugin you already trust to receive payments on your WooCommerce store
+* [Feed KuantoKusta for WooCommerce](https://nakedcatplugins.com/product/feed-kuantokusta-for-woocommerce-pro/) - Publish your products on KuantoKusta with this easy-to-use feed generator
+* [Multibanco, MB WAY, Credit card, Apple Pay, Google Pay, Payshop, and PIX (ifthenpay) for WooCommerce - PRO add-on](https://nakedcatplugins.com/product/multibanco-mbway-credit-card-payshop-ifthenpay-woocommerce-pro-add-on/) - Extra features for the plugin you already trust to receive payments on your WooCommerce store
 * [Simple Checkout Fields Manager for WooCommerce](https://nakedcatplugins.com/product/simple-custom-fields-for-woocommerce-blocks-checkout/) - Add custom fields and manage (remove, make required or optional) core fields on the new WooCommerce Block-based Checkout
 * [Simple WooCommerce Order Approval](https://nakedcatplugins.com/product/simple-woocommerce-order-approval/) - The hassle-free solution for WooCommerce order approval before payment
 * [Shop as Client for WooCommerce](https://nakedcatplugins.com/product/shop-as-client-for-woocommerce-pro-add-on/) - Quickly create orders on behalf of your customers
-* [Taxonomy/Term and Role based Discounts for WooCommerce](https://nakedcatplugins.com/product/taxonomy-term-and-role-based-discounts-for-woocommerce-pro-add-on/) - Easily create bulk discount rules for products based on any taxonomy terms (built-in or custom)
+* [Taxonomy/Term and Role-based Discounts for WooCommerce](https://nakedcatplugins.com/product/taxonomy-term-and-role-based-discounts-for-woocommerce-pro-add-on/) - Easily create bulk discount rules for products based on any taxonomy terms (built-in or custom)
 
 == Installation ==
 
 * Use the included automatic install feature on your WordPress admin panel and search for “DPD Portugal Pickup WooCommerce”.
-* Go to WooCoomerce > Settings > Shipping > Shipping zones and for each zone/method you want the DPD Portugal Pickup points selection to be activated, set “Yes” on the “DPD Portugal Pickup” option.
-* Mandatory if you want to show the point on a map (using Mapbox - recommended): go to the [Mapbox Acess tokens page](https://www.mapbox.com/account/access-tokens) and get either your default public token or genrerate a new one, then add it to WooCommerce > Settings > Shipping > Shipping options > DPD Pickup network in Portugal > Mapbox public token.
+* Go to WooCommerce > Settings > Shipping > Shipping zones and for each zone/method you want the DPD Portugal Pickup points selection to be activated, set “Yes” on the “DPD Pickup in Portugal” option.
+* Mandatory if you want to show the point on a map (using Mapbox - recommended): go to the [Mapbox Access tokens page](https://www.mapbox.com/account/access-tokens) and get either your default public token or generate a new one, then add it to WooCommerce > Settings > Shipping > Shipping options > DPD Pickup network in Portugal > Mapbox public token.
 * Mandatory if you want to show the point on a map (using Google Maps): go to the [Google APIs Console](https://console.developers.google.com/cloud-resource-manager) and create a project, then go to the [Maps Static API](https://developers.google.com/maps/documentation/maps-static/get-api-key) documentation website and click on “Get started”, choose “Maps”, select your project and generate a new key, finally add it to WooCommerce > Settings > Shipping > Shipping options > DPD Pickup network in Portugal > Google Maps API Key.
 
 == Frequently Asked Questions ==
@@ -85,14 +85,14 @@ No. Only our “[DPD / Geopost Pickup and Lockers network for WooCommerce](https
 = Is this a shipping method? =
 
 No! This is an add-on for any method that supports “shipping zones” (WooCommerce >= 2.6).
-You need to set the shipping fees using built-in or plugin installed methods and then set “Yes” on the “DPD Portugal Pickup” option on each zone/method that applies.
+You need to set the shipping fees using built-in or plugin installed methods and then set “Yes” on the “DPD Pickup in Portugal” option on each zone/method that applies.
 
 = Can I change the number of total and near points shown on the website? =
 
 Yes! Go to WooCommerce > Settings > Shipping > Shipping options and tweak the settings as you like.
-Always set the total points to a bigger number than the near points, or you're going to end up with the just the near points.
+Always set the total points to a bigger number than the near points, or you're going to end up with just the near points.
 
-= I need to use this plugin with a shipping method that it's not compatible. Is it possible? =
+= I need to use this plugin with a shipping method that is not compatible. Is it possible? =
 
 Maybe. We have the `cppw_get_shipping_methods` filter that allows you to add other shipping methods besides the ones that are compatible. Use at your own risk.
 For example, if you want to use DPD Pickup Points with [Flat Rate per State/Country/Region for WooCommerce](https://wordpress.org/plugins/flat-rate-per-countryregion-for-woocommerce/) you would do it [like this](https://gist.github.com/webdados/92b6725c29adf3f2e0ccb627ffb51245).
@@ -113,7 +113,7 @@ Yes. Return true to the `cppw_hide_lockers` filter.
 = I'm getting the “There are no DPD points in the database” and I can't get it to work even if I force the update process in the backend. What can I do? =
 
 This means your hosting provider is blocking the two ways that we have to update the Pickup points from DPD: webservice on port 7554 and FTP.
-You should ask them to unblock HTTP requests to https://webservices.chronopost.pt:7554 and or the FTP functions on PHP.
+You should ask them to unblock HTTP requests to https://webservices.chronopost.pt:7554 and/or the FTP functions on PHP.
 
 = Is this plugin compatible with the new WooCommerce High-Performance Order Storage? =
 
@@ -121,11 +121,11 @@ Yes.
 
 = I need technical support. Who should I contact, DPD or Webdados? =
 
-The development and support is [Naked Cat Plugins (by Webdados)](https://nakedcatplugins.com/) responsibility.
+Development and support are the responsibility of [Naked Cat Plugins (by Webdados)](https://nakedcatplugins.com/).
 For free/standard support you should use the support forums at WordPress.org but no answer is guaranteed.
 For premium/urgent support or custom developments you should contact [Webdados](https://www.webdados.pt/contactos/) directly. Charges may (and most certainly will) apply.
 
-If you buy our [Pro DPD for label issuing plugin](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/), you’ll also get premium support for this plugin.
+If you buy our “[DPD Portugal for WooCommerce](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/)” plugin, you’ll also get premium support for this plugin.
 
 = Where do I report security vulnerabilities found in this plugin? =  
  
