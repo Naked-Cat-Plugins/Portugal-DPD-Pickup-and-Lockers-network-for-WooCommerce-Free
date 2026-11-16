@@ -78,7 +78,7 @@ Already know our other WooCommerce (premium) plugins?
 
 == Frequently Asked Questions ==
 
-= Is this plugin compatible with the new WooCommerce Block-Based Checkout? =
+= Is this plugin compatible with the WooCommerce Block-Based Checkout? =
 
 No. Only our “[DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/)” premium plugin is.
 
@@ -115,7 +115,7 @@ Yes. Return true to the `cppw_hide_lockers` filter.
 This means your hosting provider is blocking the two ways that we have to update the Pickup points from DPD: webservice on port 7554 and FTP.
 You should ask them to unblock HTTP requests to https://webservices.chronopost.pt:7554 and/or the FTP functions on PHP.
 
-= Is this plugin compatible with the new WooCommerce High-Performance Order Storage? =
+= Is this plugin compatible with the WooCommerce High-Performance Order Storage? =
 
 Yes.
 
