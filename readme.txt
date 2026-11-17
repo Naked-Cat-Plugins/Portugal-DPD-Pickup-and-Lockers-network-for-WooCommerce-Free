@@ -16,13 +16,13 @@ Lets you deliver on the DPD Portugal Pickup network of partners or Lockers.
 
 Lets you deliver on the [DPD Portugal](https://dpd.pt/) (formerly Chronopost and SEUR) Pickup network of partners or Lockers. This is not a shipping method but rather an add-on for any WooCommerce shipping method you activate it on.
 
-This is not an official DPD Portugal plugin, but their support was obtained during its development. The DPD logo and brand are copyrighted, belong to them and are used with their permission.
+This is not an official DPD Portugal plugin, but their support was obtained during its development. The DPD logo and brand are trademarks of DPD, used with their permission.
 
 = Features: =
 
 * Lets the store client choose a DPD Portugal Pickup point or Locker for the shipping delivery;
 * The DPD Portugal Pickup points option can be associated with any zone/method by the store owner;
-* This plugin does not create a new WooCommerce Shipping Method and is compatible with methods that can be associated with a zone (WooCommerce 2.6 and above);
+* This plugin does not create a new WooCommerce Shipping Method and is compatible with methods that can be associated with a zone;
 * All WooCommerce built-in shipping methods are compatible;
 
 = Pro plugins: =
@@ -51,7 +51,7 @@ If you buy our “[DPD Portugal for WooCommerce](https://nakedcatplugins.com/pro
 * [Flexible Shipping for WooCommerce](https://wordpress.org/plugins/flexible-shipping/);
 * [Table Rate Shipping for WooCommerce](https://bolderelements.net/plugins/table-rate-shipping-woocommerce/) (by Bolder Elements);
 * [WooCommerce Advanced Shipping](https://codecanyon.net/item/woocommerce-advanced-shipping/8634573);
-* Additional compatibility with other plugins can be implemented with costs to be budgeted under contact;
+* We can add compatibility with other plugins on request, with a quote;
 
 = Other (premium) plugins =
 
@@ -84,7 +84,7 @@ No. Only our “[DPD / Geopost Pickup and Lockers network for WooCommerce](https
 
 = Is this a shipping method? =
 
-No. This is an add-on for any method that supports “shipping zones” (WooCommerce >= 2.6).
+No. This is an add-on for any method that supports “shipping zones”.
 You need to set the shipping fees using built-in or plugin installed methods and then set “Yes” on the “DPD Pickup in Portugal” option on each zone/method that applies.
 
 = Can I change the number of total and near points shown on the website? =
