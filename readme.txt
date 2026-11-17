@@ -27,9 +27,9 @@ This is not an official DPD Portugal plugin, but their support was obtained duri
 
 = Pro plugins: =
 
-**Looking for a DPD, Chronopost, BRT, SEUR, PostNord, or Speedy Pickup and Lockers solution for other countries or the block-based checkout?**
+**Looking for a DPD, Chronopost, BRT, SEUR or PostNord Pickup and Lockers solution for other countries or the block-based checkout?**
 
-Our “[DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/)” premium plugin allows delivery in the Geopost network of Parcelshops and Lockers in Austria, Belgium, Bulgaria (Speedy), Croatia, Czech Republic, Denmark (PostNord), Estonia, Finland (PostNord), France (Chronopost), Germany, Hungary, Ireland, Italy (BRT), Latvia, Lithuania, Luxembourg, Netherlands, Norway (PostNord), Poland, Portugal, Romania, Slovakia, Slovenia, Spain (SEUR), Sweden (PostNord), Switzerland, and United Kingdom.
+Our “[DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/)” premium plugin allows delivery in the Geopost network of Parcelshops and Lockers in Austria, Belgium, Croatia, Czech Republic, Denmark (PostNord), Estonia, Finland (PostNord), France (Chronopost), Germany, Hungary, Ireland, Italy (BRT), Latvia, Lithuania, Luxembourg, Netherlands, Norway (PostNord), Poland, Portugal, Romania, Slovakia, Slovenia, Spain (SEUR), Sweden (PostNord), and Switzerland.
 
 Suitable for WooCommerce shops using DPD to ship from any European country that can deliver to Pickup Points in the countries listed above.
 
@@ -84,12 +84,12 @@ No. Only our “[DPD / Geopost Pickup and Lockers network for WooCommerce](https
 
 = Is this a shipping method? =
 
-No! This is an add-on for any method that supports “shipping zones” (WooCommerce >= 2.6).
+No. This is an add-on for any method that supports “shipping zones” (WooCommerce >= 2.6).
 You need to set the shipping fees using built-in or plugin installed methods and then set “Yes” on the “DPD Pickup in Portugal” option on each zone/method that applies.
 
 = Can I change the number of total and near points shown on the website? =
 
-Yes! Go to WooCommerce > Settings > Shipping > Shipping options and tweak the settings as you like.
+Yes. Go to WooCommerce > Settings > Shipping > Shipping options and tweak the settings as you like.
 Always set the total points to a bigger number than the near points, or you're going to end up with just the near points.
 
 = I need to use this plugin with a shipping method that is not compatible. Is it possible? =
@@ -123,7 +123,7 @@ Yes.
 
 Development and support are the responsibility of [Naked Cat Plugins (by Webdados)](https://nakedcatplugins.com/).
 For free/standard support you should use the support forums at WordPress.org but no answer is guaranteed.
-For premium/urgent support or custom developments you should contact [Webdados](https://www.webdados.pt/contactos/) directly. Charges may (and most certainly will) apply.
+For premium/urgent support or custom developments you should contact [Naked Cat Plugins](https://nakedcatplugins.com/product/custom-development/) directly. Charges apply.
 
 If you buy our “[DPD Portugal for WooCommerce](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/)” plugin, you’ll also get premium support for this plugin.
 
